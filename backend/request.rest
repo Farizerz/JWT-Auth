@@ -1,0 +1,29 @@
+GET http://localhost:5000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWUiOiJGYXJpeiIsImVtYWlsIjoiZmFyaXplcnpAZ21haWwuY29tIiwiaWF0IjoxNjYwMjk4MDE4LCJleHAiOjE2NjAyOTgwMzh9.w-fjQhdezWcgBehyn2JLQL-fKxJgjrgwIMNBFM81HwE
+
+
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "name": "Farizerz",
+    "email": "Farizerzz@gmail.com",
+    "password": "111111",
+    "confirmPassword": "111111"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "farizerz@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
