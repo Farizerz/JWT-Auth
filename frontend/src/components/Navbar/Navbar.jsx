@@ -19,7 +19,7 @@ const Navbar = () => {
         <div>
             <nav className='navbar navbar-expand-sm navbar-dark bg-dark sticky-top'>
                 <div className='container-fluid'>
-                    <a href='http://farizrr.com' target='blank_' style={{marginRight: '10ppx'}}>
+                    <a href='http://farizrr.com' target='blank_' style={{marginRight: '10px'}}>
                         <img src='https://www.pngall.com/wp-content/uploads/2/F-Letter.png' style={{width: '40px', height: '40px'}} />
                     </a>
                     {/* ini fungsinya semua tombol jadi dropdown ketika resolusi jadi kecil */}
