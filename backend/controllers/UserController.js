@@ -19,7 +19,7 @@ export const getUser = async(req, res) => {
 
 export const Register = async (req, res) => {
     const { name, email, password, confirmPassword } = req.body;
-    //if pass and conf pass not the same
+    //if password & confirm password are not the same
     if(password != confirmPassword) return res.status(400).json({msg: 'Password and confirm password are not the same!'});
     //if pass and conf pass are the same, encrypt password
     const salt = await bcrypt.genSalt();
@@ -47,7 +47,7 @@ export const Login = async(req, res) => {
         });
         //compare password to the password in the database
         const match = await bcrypt.compare(req.body.password, user[0].password);
-        //if the oasswird doesn't match
+        //if the password doesn't match
         if(!match) return res.status(400).json({msg: 'Wrong password!'});
         //if the password matches, create variables based on the selected query
         const userID = user[0].id;
